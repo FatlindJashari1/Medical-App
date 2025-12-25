@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MediCore | Digital Health Platform</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body class="light-mode">
+
+<div id="auth-screen" class="screen-visible">
+<div class="auth-card">
+<h2 class="logo"><i class="fas fa-heartbeat"></i> MediCore</h2>
+<p>Access Your Digital Health Portal</p>
+
+<form id="auth-form">
+<input type="text" id="auth-name" placeholder="Full Name" required>
+<input type="email" id="auth-email" placeholder="Email" required>
+<input type="password" id="auth-password" placeholder="Password" required>
+
+<select id="auth-role" required>
+<option value="" disabled selected>Select Your Role</option>
+<option value="Patient">Patient</option>
+<option value="Doctor">Doctor</option>
+<option value="Lab Staff">Laboratory Staff</option>
+</select>
+
+<div class="auth-actions">
+<button type="submit" id="login-btn" class="btn primary-btn">Login</button>
+<button type="button" id="register-toggle-btn" class="btn secondary-btn">New User? Register</button>
+</div>
+</form>
+
+<div class="extra-actions">
+<button id="dark-mode-toggle" class="btn small-btn"><i class="fas fa-moon"></i> Dark Mode</button>
+</div>
+</div>
+</div>
+
+<div id="app-shell" class="hidden">
+
+<aside id="sidebar">
+<h2 class="sidebar-logo"><i class="fas fa-laptop-medical"></i> MediCore</h2>
+<nav id="sidebar-nav">
+</nav>
+<div class="sidebar-footer">
+<div class="user-info">
+<span id="user-display-name"></span>
+<span id="user-display-role" class="tag"></span>
+</div>
+<button id="logout-btn" class="btn logout-btn"><i class="fas fa-sign-out-alt"></i> Logout</button>
+</div>
+</aside>
+
+<main id="main-content">
+<header id="main-header">
+<h1 id="dashboard-title">Dashboard</h1>
+<div class="header-actions">
+<div id="notification-panel" class="notification-panel">
+<button id="notification-toggle" class="btn icon-btn"><i class="fas fa-bell"></i> <span id="notification-count" class="badge hidden">0</span></button>
+<div id="notification-dropdown" class="dropdown-content hidden">
+<h3>Notifications</h3>
+<ul id="notification-list">
+</ul>
+</div>
+</div>
+<button id="dark-mode-app-toggle" class="btn icon-btn"><i class="fas fa-moon"></i></button>
+</div>
+</header>
+
+<div id="app-dashboard" class="dashboard-area">
+</div>
+</main>
+</div>
+
+<div id="generic-modal" class="modal hidden">
+<div class="modal-content">
+<span class="close-btn">&times;</span>
+<h3 id="modal-title">Modal Title</h3>
+<div id="modal-body">
+</div>
+</div>
+</div>
+
+<div id="chat-modal" class="modal hidden chat-window">
+<div class="modal-content chat-content">
+<div class="chat-header">
+<h3 id="chat-partner">Chat with Patient</h3>
+<span class="close-btn">&times;</span>
+</div>
+<div id="chat-messages" class="chat-body">
+</div>
+<div class="chat-input-area">
+<input type="text" id="chat-input" placeholder="Type a message...">
+<button id="send-chat-btn" class="btn primary-btn"><i class="fas fa-paper-plane"></i></button>
+</div>
+</div>
+</div>
+
+
+<script src="script.js"></script>
+</body>
+</html>

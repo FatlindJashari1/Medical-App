@@ -1,0 +1,2 @@
+#Medical-App
+This medical app was developed to provide users with quick and easy access to essential health-related information in a simple and user-friendly way. The goal of the project is to support learning and awareness in the medical field through a clean and well-structured interface. This application was built as a practical project to strengthen skills in web development and healthcare-focused applications.
